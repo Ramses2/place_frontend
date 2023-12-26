@@ -17,6 +17,8 @@ import './PlaceForm.css';
 
 const NewPlace = () => {
   const auth = useContext(AuthContext);
+  //console.log('Auth:', auth);
+  //auth.token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTg0MTczODNiYmU4NDU0M2NjOGY0ZWEiLCJlbWFpbCI6Im9saXZpYXJhaWxlYW51QGdtYWlsLmNvbSIsImlhdCI6MTcwMzUxNjYyNywiZXhwIjoxNzAzNTIwMjI3fQ.HHx9_-xznVH5p-x-5DlXk_3glYNKa3Gcv1XfG4_FrlQ"
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const [formState, inputHandler] = useForm(
     {
@@ -50,7 +52,7 @@ const NewPlace = () => {
       formData.append('description', formState.inputs.description.value);
       formData.append('address', formState.inputs.address.value);
       formData.append('image', formState.inputs.image.value);
-      await sendRequest('http://localhost:5000/api/places', 'POST', formData, {
+      await sendRequest('https://4495-89-120-77-181.ngrok-free.app/api/places', 'POST', formData, {
         Authorization: 'Bearer ' + auth.token
       });
       history.push('/');

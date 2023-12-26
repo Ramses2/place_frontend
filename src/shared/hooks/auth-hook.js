@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
+import Cookies from 'js-cookie';
 
 let logoutTimer;
 
@@ -21,6 +22,7 @@ export const useAuth = () => {
         expiration: tokenExpirationDate.toISOString()
       })
     );
+    Cookies.set('sv_bv', token, { expires: tokenExpirationDate, secure: true });
   }, []);
 
   const logout = useCallback(() => {
