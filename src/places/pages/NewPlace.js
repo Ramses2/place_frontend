@@ -52,7 +52,7 @@ const NewPlace = () => {
       formData.append('description', formState.inputs.description.value);
       formData.append('address', formState.inputs.address.value);
       formData.append('image', formState.inputs.image.value);
-      await sendRequest('https://4495-89-120-77-181.ngrok-free.app/api/places', 'POST', formData, {
+      await sendRequest('https://d23a-89-120-77-181.ngrok-free.app/api/places', 'POST', formData, {
         Authorization: 'Bearer ' + auth.token
       });
       history.push('/');

@@ -13,7 +13,7 @@ const Users = () => {
     const fetchUsers = async () => {
       try {
         const responseData = await sendRequest(
-          'https://4495-89-120-77-181.ngrok-free.app/api/users'
+          'https://d23a-89-120-77-181.ngrok-free.app/api/users'
         );
 
         setLoadedUsers(responseData.users);

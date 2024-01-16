@@ -14,9 +14,15 @@ import Auth from './user/pages/Auth';
 import MainNavigation from './shared/components/Navigation/MainNavigation';
 import { AuthContext } from './shared/context/auth-context';
 import { useAuth } from './shared/hooks/auth-hook';
+import Cookies from 'universal-cookie';
 
 const App = () => {
   const { token, login, logout, userId } = useAuth();
+
+  const cookies=new Cookies();
+  //cookies.set('myCat', 'Potz', { path: '/' });
+  //cookies.set('Clarity', 'Potza', { path: '/' });
+  console.log(cookies.get('myCat')); // Pacman
 
   let routes;
 

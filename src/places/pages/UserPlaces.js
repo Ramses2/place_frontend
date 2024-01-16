@@ -16,7 +16,7 @@ const UserPlaces = () => {
     const fetchPlaces = async () => {
       try {
         const responseData = await sendRequest(
-          `https://4495-89-120-77-181.ngrok-free.app/api/places/user/${userId}`
+          `https://d23a-89-120-77-181.ngrok-free.app/api/places/user/${userId}`
         );
         setLoadedPlaces(responseData.places);
       } catch (err) {}

@@ -70,7 +70,7 @@ const Auth = () => {
     if (isLoginMode) {
       try {
         const responseData = await sendRequest(
-          'https://4495-89-120-77-181.ngrok-free.app/api/users/login',
+          'https://d23a-89-120-77-181.ngrok-free.app/api/users/login',
           'POST',
           JSON.stringify({
             email: formState.inputs.email.value,
@@ -90,7 +90,7 @@ const Auth = () => {
         formData.append('password', formState.inputs.password.value);
         formData.append('image', formState.inputs.image.value);
         const responseData = await sendRequest(
-          'https://4495-89-120-77-181.ngrok-free.app/api/users/signup',
+          'https://d23a-89-120-77-181.ngrok-free.app/api/users/signup',
           'POST',
           formData
         );
